@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class status_pqrs extends Model
 {
     use HasFactory;
+    public function pqrs_gcb ()
+    {
+        return $this->hasMany(pqrs_gcb::class);
+    }
 }
