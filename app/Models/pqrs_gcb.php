@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class pqrs_gcb extends Model
+class Pqrs_gcb extends Model
 {
     use HasFactory;
     public function pqrs_subject()
@@ -24,4 +24,14 @@ class pqrs_gcb extends Model
     {
         return $this->hasMany(pqrs_tracking::class);
     }
+    protected $fillable = [
+        'document',
+        'name',
+        'lastname',
+        'phone',
+        'email',
+        'other_subject',
+        'message',
+        'evidence',
+    ];
 }

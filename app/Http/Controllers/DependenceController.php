@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Inertia\Inertia;
+use App\Models\Pqrs_dependence;
+use Illuminate\Support\Facades\Validator;
 
 class DependenceController extends Controller
 {
@@ -13,7 +16,11 @@ class DependenceController extends Controller
      */
     public function index()
     {
-        //
+        $dependence = Pqrs_dependence::all();
+        return Inertia::render('Dependence/Index', [
+            'dependences' => $dependence
+        ]);
+
     }
 
     /**

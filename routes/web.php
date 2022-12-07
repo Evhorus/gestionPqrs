@@ -1,7 +1,9 @@
 <?php
 
-use App\Http\Controllers\DependenceController;
+use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
+use Inertia\Inertia;
+use App\Http\Controllers\DependenceController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,4 +19,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::resource('/pqrs/dependences', DependenceController::class )->names('pqrs.dependences');
+
+Route::resource('/pqrs/dependences', DependenceController::class);
